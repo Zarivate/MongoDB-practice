@@ -1,7 +1,7 @@
 import React from "react";
 
-function Restaurants() {
+function Restaurant() {
   return <div>Restaurants component goes here</div>;
 }
 
-export default Restaurants;
+export default Restaurant;
