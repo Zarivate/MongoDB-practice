@@ -19,8 +19,8 @@ function App() {
   }
 
   return (
-    <div>
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
+    <div class="text-center">
+      <nav className="navbar navbar-expand navbar-dark bg-dark px-2">
         {/* Link for displaying all the restaurants */}
         <a href="/restaurants" className="navbar-brand">
           Restaurant Reviews
