@@ -20,7 +20,7 @@ MongoClient.connect(process.env.RESTREVIEWS_DB_URI, {
     console.error(err.stack);
     process.exit(1);
   })
-  .then(async (client) => {
+  .then(async (client, conn) => {
     // Initial reference to restaurants collection in DB
     await RestaurantsDAO.injectDB(client);
     await ReviewsDAO.injectDB(client);

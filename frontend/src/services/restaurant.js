@@ -8,7 +8,7 @@ class RestaurantDataService {
   }
 
   get(id) {
-    return http.get(`/restaurant?id=${id}`);
+    return http.get(`/restaurants/id/${id}`);
   }
 
   find(query, by = "name", page = 0) {
@@ -16,15 +16,17 @@ class RestaurantDataService {
   }
 
   createReview(data) {
-    return http.post("/review-new", data);
+    return http.post("/restaurants/review", data);
   }
 
   updateReview(data) {
-    return http.put("/review-edit", data);
+    return http.put("/restaurants/review", data);
   }
+  // this was old way of doing it "/restaurants/review-delete?id=${id}""
 
   deleteReview(id, userId) {
-    return http.delete(`/review-delete?id=${id}`, {
+    return http.delete(`/restaurants/review?id=${id}`, {
+      // User Id passed in so correct review is deleted, normally not best practice but fine for now
       data: { user_id: userId },
     });
   }
