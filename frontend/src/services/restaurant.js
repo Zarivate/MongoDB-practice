@@ -4,7 +4,7 @@ import http from "../http-common";
 class RestaurantDataService {
   getAll(page = 0) {
     // Will be added to end of baseUrl in http-common
-    return http.get(`restaurants?page=${page}`);
+    return http.get(`/restaurants?page=${page}`);
   }
 
   get(id) {
@@ -30,7 +30,7 @@ class RestaurantDataService {
   }
 
   getCuisines(id) {
-    return http.get(`/cuisines`);
+    return http.get(`/restaurants/cuisines`);
   }
 }
 
