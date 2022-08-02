@@ -50,8 +50,8 @@ const AddReview = (props) => {
       RestaurantDataService.createReview(data)
         .then((response) => {
           setSubmitted(true);
-          console.log(data);
-          console.log(response.data);
+          //console.log(data);
+          //console.log(response.data);
         })
         .catch((e) => {
           console.log(e);
